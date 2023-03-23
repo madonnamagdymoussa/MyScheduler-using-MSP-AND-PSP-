@@ -1,0 +1,405 @@
+###############################################################################
+#
+# IAR ELF Linker V9.32.1.338/W64 for ARM                  14/Mar/2023  22:20:15
+# Copyright 2007-2022 IAR Systems AB.
+#
+#    Output file  =
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Exe\MYRTOS_Lab3_V1.out
+#    Map file     =
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\List\MYRTOS_Lab3_V1.map
+#    Command line =
+#        -f D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Exe\MYRTOS_Lab3_V1.out.rsp
+#        (D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj\CortexM.o
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj\GPIO.o
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj\GPIO_config.o
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj\GPTM.o
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj\GPTM_config.o
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj\main.o
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj\NVIC.o
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj\Scheduler.o
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj\startup_ewarm.o
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj\SystemControl.o
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj\SystemControl_Config.o
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj\SystickTimer.o
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj\Task.o --no_out_extension -o
+#        D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Exe\MYRTOS_Lab3_V1.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\List\MYRTOS_Lab3_V1.map
+#        --config D:\IAR_WorkSpace\MYRTOS_Lab3_V1\MYRTOS_Lab3_V1.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale
+#        --cpu=Cortex-M4 --fpu=VFPv4_sp)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 32'638, alignment = 8 { };
+define block HEAP with size = 0, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address   Size  Object
+  -------            ----         -------   ----  ------
+"A0":                                      0x26c
+  .intvec            const            0x0  0x26c  startup_ewarm.o [1]
+                                  - 0x26c  0x26c
+
+"P1":                                      0xe4e
+  .text              ro code        0x26c  0x394  GPIO.o [1]
+  .text              ro code        0x600  0x230  I64DivMod.o [4]
+  .text              ro code        0x830    0x2  I64DivZer.o [4]
+  .text              ro code        0x832   0x3a  packbits_init_single.o [4]
+  .text              ro code        0x86c  0x176  Scheduler.o [1]
+  .text              ro code        0x9e4   0xc4  Task.o [1]
+  .text              ro code        0xaa8   0xec  GPTM.o [1]
+  .text              ro code        0xb94   0xaa  SystickTimer.o [1]
+  .text              ro code        0xc40   0xa0  SystemControl.o [1]
+  .text              ro code        0xce0   0x30  NVIC.o [1]
+  .rodata            const          0xd10   0x60  GPTM.o [1]
+  .text              ro code        0xd70   0x38  main.o [1]
+  .rodata            const          0xda8   0x30  GPIO_config.o [1]
+  .rodata            const          0xdd8   0x30  GPTM.o [1]
+  .rodata            const          0xe08   0x30  GPTM.o [1]
+  .text              ro code        0xe38   0x28  data_init.o [4]
+  .text              ro code        0xe60   0x22  fpinit_M.o [3]
+  .iar.init_table    const          0xe84   0x10  - Linker created -
+  .text              ro code        0xe94   0x1e  cmain.o [4]
+  .text              ro code        0xeb2    0x4  low_level_init.o [2]
+  .text              ro code        0xeb6    0x4  exit.o [2]
+  .text              ro code        0xebc    0xa  cexit.o [4]
+  .text              ro code        0xec8   0x14  exit.o [5]
+  .text              ro code        0xedc   0x1c  cstartup_M.o [4]
+  .rodata            const          0xef8   0x18  GPIO.o [1]
+  .rodata            const          0xf10   0x18  GPIO.o [1]
+  .rodata            const          0xf28   0x18  GPIO.o [1]
+  .rodata            const          0xf40   0x18  GPIO.o [1]
+  .rodata            const          0xf58   0x18  GPIO.o [1]
+  .rodata            const          0xf70   0x18  GPIO.o [1]
+  .rodata            const          0xf88   0x18  GPIO.o [1]
+  .rodata            const          0xfa0   0x18  GPIO.o [1]
+  .rodata            const          0xfb8   0x18  GPIO.o [1]
+  .rodata            const          0xfd0   0x10  NVIC.o [1]
+  .rodata            const          0xfe0   0x10  SystemControl.o [1]
+  .text              ro code        0xff0    0xe  startup_ewarm.o [1]
+  .rodata            const         0x1000    0x4  GPIO_config.o [1]
+  .rodata            const         0x1004    0x4  GPIO_config.o [1]
+  .rodata            const         0x1008    0x4  GPIO_config.o [1]
+  .rodata            const         0x100c    0x4  GPIO_config.o [1]
+  .rodata            const         0x1010    0x4  GPIO_config.o [1]
+  .rodata            const         0x1014    0x4  GPIO_config.o [1]
+  .rodata            const         0x1018    0x4  GPIO_config.o [1]
+  .rodata            const         0x101c    0x4  GPIO_config.o [1]
+  .rodata            const         0x1020    0x4  GPIO_config.o [1]
+  .rodata            const         0x1024    0x4  GPIO_config.o [1]
+  .rodata            const         0x1028    0x4  GPIO_config.o [1]
+  .rodata            const         0x102c    0x4  GPIO_config.o [1]
+  .rodata            const         0x1030    0x4  GPTM_config.o [1]
+  .rodata            const         0x1034    0x4  GPTM_config.o [1]
+  .rodata            const         0x1038    0x4  GPTM_config.o [1]
+  .rodata            const         0x103c    0x4  GPTM_config.o [1]
+  .rodata            const         0x1040    0x4  GPTM_config.o [1]
+  .rodata            const         0x1044    0x4  GPTM_config.o [1]
+  .rodata            const         0x1048    0x4  GPTM_config.o [1]
+  .rodata            const         0x104c    0x4  GPTM_config.o [1]
+  .rodata            const         0x1050    0x4  GPTM_config.o [1]
+  .rodata            const         0x1054    0x4  GPTM_config.o [1]
+  .rodata            const         0x1058    0x4  GPTM_config.o [1]
+  .rodata            const         0x105c    0x4  GPTM_config.o [1]
+  .rodata            const         0x1060    0x0  packbits_init_single.o [4]
+  Initializer bytes  const         0x1060   0x5a  <for P2-1>
+                                 - 0x10ba  0xe4e
+
+"P2":                                       0x7a
+  P2-1                        0x2000'0000   0x7a  <Init block>
+    .data            inited   0x2000'0000   0x18  GPIO.o [1]
+    .data            inited   0x2000'0018   0x30  GPTM_config.o [1]
+    .data            inited   0x2000'0048    0x4  Scheduler.o [1]
+    .bss             inited   0x2000'004c    0x4  main.o [1]
+    .bss             inited   0x2000'0050    0x4  Scheduler.o [1]
+    .bss             inited   0x2000'0054    0x4  Scheduler.o [1]
+    .bss             inited   0x2000'0058    0x4  Scheduler.o [1]
+    .bss             inited   0x2000'005c    0x4  Scheduler.o [1]
+    .bss             inited   0x2000'0060    0x4  Scheduler.o [1]
+    .bss             inited   0x2000'0064    0x4  Scheduler.o [1]
+    .bss             inited   0x2000'0068    0x4  Scheduler.o [1]
+    .bss             inited   0x2000'006c    0x4  SystickTimer.o [1]
+    .data            inited   0x2000'0070    0x2  GPIO_config.o [1]
+    .data            inited   0x2000'0072    0x2  GPIO_config.o [1]
+    .data            inited   0x2000'0074    0x2  GPIO_config.o [1]
+    .data            inited   0x2000'0076    0x2  GPIO_config.o [1]
+    .data            inited   0x2000'0078    0x2  GPIO_config.o [1]
+                            - 0x2000'007a   0x7a
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+       0x10ba     0x3'ffff  0x3'ef46
+  0x2000'007a  0x2000'7fff    0x7f86
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x5a (73% of destination):
+               0x1060  0x5a
+    1 destination range, total size 0x7a:
+          0x2000'0000  0x7a
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+command line/config:
+    -------------------------------------------------
+    Total:
+
+D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj: [1]
+    GPIO.o                      916      233       24
+    GPIO_config.o                        104       10
+    GPTM.o                      236      192
+    GPTM_config.o                         84       48
+    NVIC.o                       48       16
+    Scheduler.o                 374       23       32
+    SystemControl.o             160       16
+    SystickTimer.o              170        3        4
+    Task.o                      196
+    main.o                       56        3        4
+    startup_ewarm.o              14      620
+    -------------------------------------------------
+    Total:                    2'170    1'294      122
+
+dl7M_tln.a: [2]
+    exit.o                        4
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                        8
+
+m7M_tls.a: [3]
+    fpinit_M.o                   34
+    -------------------------------------------------
+    Total:                       34
+
+rt7M_tl.a: [4]
+    I64DivMod.o                 560
+    I64DivZer.o                   2
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 28
+    data_init.o                  40
+    packbits_init_single.o       58
+    -------------------------------------------------
+    Total:                      728
+
+shb_l.a: [5]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Gaps                          8        4
+    Linker created                        16
+-----------------------------------------------------
+    Grand Total:              2'968    1'314      122
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0xe84          --   Gb  - Linker created -
+.iar.init_table$$Limit        0xe94          --   Gb  - Linker created -
+?main                         0xe95         Code  Gb  cmain.o [4]
+ApplicationSystickCallBack
+                              0xd71    0xa  Code  Gb  main.o [1]
+CalculationFunction           0xa45   0x12  Code  Gb  Task.o [1]
+FaultISR                      0xffb    0x2  Code  Lc  startup_ewarm.o [1]
+GPIO_AlternateFunctionSelect_Registers
+                              0xf58   0x18  Data  Lc  GPIO.o [1]
+GPIO_BIT_BAND_Registers
+                        0x2000'0000   0x18  Data  Gb  GPIO.o [1]
+GPIO_ConfigureAlternateFunctionSelect
+                              0x347   0x56  Code  Gb  GPIO.o [1]
+GPIO_ConfigureCommit          0x435   0x54  Code  Gb  GPIO.o [1]
+GPIO_ConfigureDigitalEnable
+                              0x3df   0x56  Code  Gb  GPIO.o [1]
+GPIO_ConfigureInputPin        0x4e1   0x3e  Code  Gb  GPIO.o [1]
+GPIO_ConfigureInterruptMask
+                              0x57d   0x52  Code  Gb  GPIO.o [1]
+GPIO_ConfigureOutputPin
+                              0x4ad   0x34  Code  Gb  GPIO.o [1]
+GPIO_ConfigurePin_PF0   0x2000'0076    0x2  Data  Gb  GPIO_config.o [1]
+GPIO_ConfigurePin_PF1   0x2000'0074    0x2  Data  Gb  GPIO_config.o [1]
+GPIO_ConfigurePin_PF2   0x2000'0072    0x2  Data  Gb  GPIO_config.o [1]
+GPIO_ConfigurePin_PF3   0x2000'0078    0x2  Data  Gb  GPIO_config.o [1]
+GPIO_ConfigurePin_PF4   0x2000'0070    0x2  Data  Gb  GPIO_config.o [1]
+GPIO_ConfigurePortControl
+                              0x39d   0x42  Code  Gb  GPIO.o [1]
+GPIO_Data_Registers           0xf10   0x18  Data  Lc  GPIO.o [1]
+GPIO_DigitalEnable_Registers
+                              0xf40   0x18  Data  Lc  GPIO.o [1]
+GPIO_Direction_Registers
+                              0xf28   0x18  Data  Lc  GPIO.o [1]
+GPIO_EnableAFSEL_GPTM         0x549   0x34  Code  Gb  GPIO.o [1]
+GPIO_EnableRunModeClockGateControl
+                              0x26d   0x2e  Code  Lc  GPIO.o [1]
+GPIO_InterruptMask_Registers
+                              0xef8   0x18  Data  Lc  GPIO.o [1]
+GPIO_LOCK_Registers           0xf88   0x18  Data  Lc  GPIO.o [1]
+GPIO_PortControl_Registers
+                              0xf70   0x18  Data  Lc  GPIO.o [1]
+GPIO_Port_Commit              0xfa0   0x18  Data  Lc  GPIO.o [1]
+GPIO_PullUp_Registers         0xfb8   0x18  Data  Lc  GPIO.o [1]
+GPIO_SetData                  0x2f1   0x56  Code  Gb  GPIO.o [1]
+GPIO_SetInputStatus           0x489   0x24  Code  Gb  GPIO.o [1]
+GPIO_SetPinStatus             0x29b   0x56  Code  Gb  GPIO.o [1]
+GPIO_TimerAFSELConfig_ArrPtrStruct
+                              0xda8   0x30  Data  Gb  GPIO_config.o [1]
+GPIO_ToggleBitBandBits        0x51f   0x2a  Code  Gb  GPIO.o [1]
+GPTM_Config_32BitTimer0A
+                             0x1030    0x4  Data  Gb  GPTM_config.o [1]
+GPTM_Config_32BitTimer0B
+                             0x1034    0x4  Data  Gb  GPTM_config.o [1]
+GPTM_Config_32BitTimer1A
+                             0x1038    0x4  Data  Gb  GPTM_config.o [1]
+GPTM_Config_32BitTimer1B
+                             0x103c    0x4  Data  Gb  GPTM_config.o [1]
+GPTM_Config_32BitTimer2A
+                             0x1040    0x4  Data  Gb  GPTM_config.o [1]
+GPTM_Config_32BitTimer2B
+                             0x1044    0x4  Data  Gb  GPTM_config.o [1]
+GPTM_Config_32BitTimer3A
+                             0x1048    0x4  Data  Gb  GPTM_config.o [1]
+GPTM_Config_32BitTimer3B
+                             0x104c    0x4  Data  Gb  GPTM_config.o [1]
+GPTM_Config_32BitTimer4A
+                             0x1050    0x4  Data  Gb  GPTM_config.o [1]
+GPTM_Config_32BitTimer4B
+                             0x1054    0x4  Data  Gb  GPTM_config.o [1]
+GPTM_Config_32BitTimer5A
+                             0x1058    0x4  Data  Gb  GPTM_config.o [1]
+GPTM_Config_32BitTimer5B
+                             0x105c    0x4  Data  Gb  GPTM_config.o [1]
+GPTM_Config_ArrPtrStruct
+                        0x2000'0018   0x30  Data  Gb  GPTM_config.o [1]
+GPTM_ConfigurationRegisters
+                              0xe08   0x30  Data  Lc  GPTM.o [1]
+GPTM_Control                  0xdd8   0x30  Data  Lc  GPTM.o [1]
+GPTM_DisableTimer             0xae3   0x34  Code  Lc  GPTM.o [1]
+GPTM_EnableClkTimer           0xaa9   0x3a  Code  Lc  GPTM.o [1]
+GPTM_InitializeDelayMode
+                              0xb17   0x68  Code  Gb  GPTM.o [1]
+GPTM_TimerMode                0xd10   0x60  Data  Lc  GPTM.o [1]
+InitializeTasks               0xa57   0x36  Code  Gb  Task.o [1]
+IntDefaultHandler             0xffd    0x2  Code  Lc  startup_ewarm.o [1]
+Interrupt_Enable_Registers
+                              0xfd0   0x10  Data  Lc  NVIC.o [1]
+MainOs                        0x899  0x11a  Code  Gb  Scheduler.o [1]
+NVIC_Enable_Interrupt         0xce1   0x2a  Code  Gb  NVIC.o [1]
+NmiSR                         0xff9    0x2  Code  Lc  startup_ewarm.o [1]
+Region$$Table$$Base           0xe84          --   Gb  - Linker created -
+Region$$Table$$Limit          0xe94          --   Gb  - Linker created -
+ResetISR                      0xff1    0x8  Code  Gb  startup_ewarm.o [1]
+SC_GetOscillatorValue         0xc41   0x30  Code  Lc  SystemControl.o [1]
+SC_GetSystemClock             0xc71   0x56  Code  Gb  SystemControl.o [1]
+SC_SYSDIV                     0xfe0   0x10  Data  Gb  SystemControl.o [1]
+SVCHandler                    0x9d9    0xa  Code  Gb  Scheduler.o [1]
+SwitchAccessLevel             0x86d   0x2c  Code  Gb  Scheduler.o [1]
+SysTickConfigureClockSource
+                              0xbd9    0xe  Code  Gb  SystickTimer.o [1]
+SysTickDisable                0xbb1    0xc  Code  Lc  SystickTimer.o [1]
+SysTickEnable                 0xba5    0xc  Code  Lc  SystickTimer.o [1]
+SysTickFrequencyGet           0xbbd   0x1c  Code  Lc  SystickTimer.o [1]
+SysTickGenerateDelay_Interrupt
+                              0xbed   0x34  Code  Gb  SystickTimer.o [1]
+SystickCounter          0x2000'004c    0x4  Data  Gb  main.o [1]
+SystickHandler                0xb95   0x10  Code  Gb  SystickTimer.o [1]
+Systick_Callback        0x2000'006c    0x4  Data  Lc  SystickTimer.o [1]
+Systick_Initialization        0xc31    0xe  Code  Gb  SystickTimer.o [1]
+Systick_RegisterCallbackFunction
+                              0xbe7    0x6  Code  Gb  SystickTimer.o [1]
+TaskA_RedLed                  0x9e5   0x20  Code  Gb  Task.o [1]
+TaskB_BlueLed                 0xa05   0x20  Code  Gb  Task.o [1]
+TaskC_GreenLed                0xa25   0x20  Code  Gb  Task.o [1]
+Timer0A_32_64Bit             0x1000    0x4  Data  Gb  GPIO_config.o [1]
+Timer0B_32_64Bit             0x1004    0x4  Data  Gb  GPIO_config.o [1]
+Timer1A_32_64Bit             0x1008    0x4  Data  Gb  GPIO_config.o [1]
+Timer1B_32_64Bit             0x100c    0x4  Data  Gb  GPIO_config.o [1]
+Timer2A_32_64Bit             0x1010    0x4  Data  Gb  GPIO_config.o [1]
+Timer2B_32_64Bit             0x1014    0x4  Data  Gb  GPIO_config.o [1]
+Timer3A_32_64Bit             0x1018    0x4  Data  Gb  GPIO_config.o [1]
+Timer3B_32_64Bit             0x101c    0x4  Data  Gb  GPIO_config.o [1]
+Timer4A_32_64Bit             0x1020    0x4  Data  Gb  GPIO_config.o [1]
+Timer4B_32_64Bit             0x1024    0x4  Data  Gb  GPIO_config.o [1]
+Timer5A_32_64Bit             0x1028    0x4  Data  Gb  GPIO_config.o [1]
+Timer5B_32_64Bit             0x102c    0x4  Data  Gb  GPIO_config.o [1]
+_E_MSP                  0x2000'0050    0x4  Data  Gb  Scheduler.o [1]
+_E_PSP_TA               0x2000'0058    0x4  Data  Gb  Scheduler.o [1]
+_E_PSP_TB               0x2000'0060    0x4  Data  Gb  Scheduler.o [1]
+_E_PSP_TC               0x2000'0068    0x4  Data  Gb  Scheduler.o [1]
+_S_MSP                  0x2000'0048    0x4  Data  Gb  Scheduler.o [1]
+_S_PSP_TA               0x2000'0054    0x4  Data  Gb  Scheduler.o [1]
+_S_PSP_TB               0x2000'005c    0x4  Data  Gb  Scheduler.o [1]
+_S_PSP_TC               0x2000'0064    0x4  Data  Gb  Scheduler.o [1]
+__aeabi_ldiv0                 0x831         Code  Gb  I64DivZer.o [4]
+__aeabi_uldivmod              0x601         Code  Gb  I64DivMod.o [4]
+__cmain                       0xe95         Code  Gb  cmain.o [4]
+__exit                        0xec9   0x14  Code  Gb  exit.o [5]
+__iar_data_init3              0xe39   0x28  Code  Gb  data_init.o [4]
+__iar_init_vfp                0xe61         Code  Gb  fpinit_M.o [3]
+__iar_packbits_init_single3
+                              0x833   0x3a  Code  Gb  packbits_init_single.o [4]
+__iar_program_start           0xedd         Code  Gb  cstartup_M.o [4]
+__low_level_init              0xeb3    0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0  0x26c  Data  Gb  startup_ewarm.o [1]
+_call_main                    0xea1         Code  Gb  cmain.o [4]
+_exit                         0xebd         Code  Gb  cexit.o [4]
+exit                          0xeb7    0x4  Code  Gb  exit.o [2]
+main                          0xd7d   0x24  Code  Gb  main.o [1]
+
+
+[1] = D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\Obj
+[2] = dl7M_tln.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  2'968 bytes of readonly  code memory
+  1'314 bytes of readonly  data memory
+    122 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

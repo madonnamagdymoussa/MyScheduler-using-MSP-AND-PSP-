@@ -1,0 +1,13 @@
+D:\IAR_WorkSpace\MYRTOS_Lab3_V1\Debug\BrowseInfo\GPIO.pbi: \
+  D:\IAR_WorkSpace\MYRTOS_Lab3_V1\GPIO.c \
+  D:\IAR_WorkSpace\MYRTOS_Lab3_V1\GPIO_reg.h \
+  D:\IAR_WorkSpace\MYRTOS_Lab3_V1\lstd.h \
+  D:\IAR_WorkSpace\MYRTOS_Lab3_V1\gpio_config.h \
+  D:\IAR_WorkSpace\MYRTOS_Lab3_V1\GPIO.h \
+  D:\IAR_WorkSpace\MYRTOS_Lab3_V1\NVIC.h \
+  D:\IAR_WorkSpace\MYRTOS_Lab3_V1\NVIC_config.h \
+  D:\IAR\arm\inc\c\assert.h D:\IAR\arm\inc\c\ycheck.h \
+  D:\IAR\arm\inc\c\yvals.h D:\IAR\arm\inc\c\DLib_Defaults.h \
+  D:\IAR\arm\inc\c\DLib_Config_Normal.h D:\IAR\arm\inc\c\DLib_Product.h \
+  D:\IAR\arm\inc\c\stdlib.h D:\IAR\arm\inc\c\ysizet.h \
+  D:\IAR\arm\inc\c\DLib_Product_stdlib.h
